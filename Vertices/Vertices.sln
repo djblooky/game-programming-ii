@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vertices", "Verticies\Vertices.csproj", "{84BC06A5-C01C-45D4-8561-452DBEFA85A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameLibrary", "MonoGameLibrary\MonoGameLibrary.csproj", "{AAD7C5C6-AA67-45C6-8B7C-22906FA79E9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameLibrary", "..\MonoGameLibrary\MonoGameLibrary.csproj", "{AAD7C5C6-AA67-45C6-8B7C-22906FA79E9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
