@@ -270,18 +270,54 @@ namespace Vertices
 
         private void SetUpVertices()
         {
-            VertexPositionColor[] vertices = new VertexPositionColor[6];
-            vertices[0] = new VertexPositionColor(new Vector3(0, 2, 0), Color.Red);
-            vertices[1] = new VertexPositionColor(new Vector3(-1, -1, 0), Color.Blue);
-            vertices[2] = new VertexPositionColor(new Vector3(1, -1, 0), Color.White);
-            /*
-             * Try to add some more vertices
-             * 
-           
-            */
-            vertices[3] = vertices[2];
-            vertices[4] = new VertexPositionColor(new Vector3(3, 2, 0), Color.Green);
-            vertices[5] = vertices[0];
+            VertexPositionColor[] vertices = new VertexPositionColor[36];
+            vertices[0] = new VertexPositionColor(new Vector3(0, 0, 0), Color.Pink); //A
+            vertices[1] = new VertexPositionColor(new Vector3(1, 3, 0), Color.PaleVioletRed);
+            vertices[2] = new VertexPositionColor(new Vector3(3, 2, 0), Color.PaleVioletRed);
+
+            vertices[3] = new VertexPositionColor(new Vector3(1, 3, 0), Color.PaleVioletRed); 
+            vertices[4] = new VertexPositionColor(new Vector3(4, 4, 0), Color.Pink); //B
+            vertices[5] = new VertexPositionColor(new Vector3(3, 2, 0), Color.PaleVioletRed);
+
+            vertices[6] = new VertexPositionColor(new Vector3(1, 3, 0), Color.PaleVioletRed); //C
+            vertices[7] = new VertexPositionColor(new Vector3(3, 6, 0), Color.Pink);
+            vertices[8] = new VertexPositionColor(new Vector3(4, 4, 0), Color.Pink);
+
+            vertices[9] = new VertexPositionColor(new Vector3(1, 3, 0), Color.PaleVioletRed);
+            vertices[10] = new VertexPositionColor(new Vector3(1, 7, 0), Color.Pink); //D
+            vertices[11] = new VertexPositionColor(new Vector3(3, 6, 0), Color.PaleVioletRed);
+
+            vertices[12] = new VertexPositionColor(new Vector3(1, 3, 0), Color.PaleVioletRed);
+            vertices[13] = new VertexPositionColor(new Vector3(1, 7, 0), Color.Pink); //E
+            vertices[14] = new VertexPositionColor(new Vector3(0, 5, 0), Color.PaleVioletRed);
+
+            vertices[15] = new VertexPositionColor(new Vector3(-2, 4, 0), Color.Pink);
+            vertices[16] = new VertexPositionColor(new Vector3(1, 3, 0), Color.PaleVioletRed); //F  
+            vertices[17] = new VertexPositionColor(new Vector3(0, 5, 0), Color.PaleVioletRed);
+
+            vertices[18] = new VertexPositionColor(new Vector3(-1, 7, 0), Color.Pink); //L
+            vertices[19] = new VertexPositionColor(new Vector3(-2, 4, 0), Color.PaleVioletRed);
+            vertices[20] = new VertexPositionColor(new Vector3(0, 5, 0), Color.PaleVioletRed);
+
+            vertices[21] = new VertexPositionColor(new Vector3(-2, 4, 0), Color.PaleVioletRed); //K
+            vertices[22] = new VertexPositionColor(new Vector3(-3, 6, 0), Color.Pink);
+            vertices[23] = new VertexPositionColor(new Vector3(-1, 7, 0), Color.Pink);
+
+            vertices[24] = new VertexPositionColor(new Vector3(-2, 4, 0), Color.PaleVioletRed); //J
+            vertices[25] = new VertexPositionColor(new Vector3(-3, 6, 0), Color.Pink);
+            vertices[26] = new VertexPositionColor(new Vector3(-4, 4, 0), Color.PaleVioletRed);
+
+            vertices[27] = new VertexPositionColor(new Vector3(-2, 4, 0), Color.PaleVioletRed); //I
+            vertices[28] = new VertexPositionColor(new Vector3(-4, 4, 0), Color.Pink);
+            vertices[29] = new VertexPositionColor(new Vector3(-3, 2, 0), Color.Pink);
+
+            vertices[30] = new VertexPositionColor(new Vector3(-2, 4, 0), Color.PaleVioletRed); //H
+            vertices[31] = new VertexPositionColor(new Vector3(-3, 2, 0), Color.Pink);
+            vertices[32] = new VertexPositionColor(new Vector3(0, 0, 0), Color.PaleVioletRed);
+
+            vertices[33] = new VertexPositionColor(new Vector3(1, 3, 0), Color.Pink); //G
+            vertices[34] = new VertexPositionColor(new Vector3(-2, 4, 0), Color.PaleVioletRed);
+            vertices[35] = new VertexPositionColor(new Vector3(0, 0, 0), Color.Pink);
 
             //vertexBuffer = new VertexBuffer(this.graphics.GraphicsDevice, 
             //       VertexPositionColor.SizeInBytes * vertices.Length, BufferUsage.WriteOnly);
