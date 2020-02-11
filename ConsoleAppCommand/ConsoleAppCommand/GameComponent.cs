@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleAppCommand
 {
-    class GameComponent
+    public class GameComponent
     {
         protected int _X = 0, _Y = 0;
 

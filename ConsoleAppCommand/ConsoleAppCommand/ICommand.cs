@@ -4,8 +4,8 @@ using System.Text;
 
 namespace ConsoleAppCommand
 {
-    interface ICommand
+    public interface ICommand
     {
-        void Execute(GameComponent go);
+        public void Execute(GameComponent go);
     }
 }
