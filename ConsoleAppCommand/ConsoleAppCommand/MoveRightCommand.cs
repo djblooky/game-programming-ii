@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleAppCommand
 {
-     class MoveRightCommand : Command
+    public class MoveRightCommand : Command
     {
         public MoveRightCommand()
         {

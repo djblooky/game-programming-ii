@@ -16,34 +16,59 @@ namespace ConsoleAppCommand
                 Console.Write("Enter a key:");
                 ConsoleKeyInfo keyI = Console.ReadKey();
 
-                switch (keyI.Key)
+                ICommand command = GetCommandFromKey(keyI);
+                if (command != null)
+                {
+                    command.Execute(fakeComponentReciever);
+                }
+                else
+                {
+                    Console.WriteLine("Sorry I dont know that command");
+                }
+
+                switch (keyI.Key) {
+                    case ConsoleKey.Escape:
+                    case ConsoleKey.Q:
+                        isPlaying = false;
+                        break;
+                }
+
+
+                Console.WriteLine($"x:{fakeComponentReciever.X} y:{fakeComponentReciever.Y}");
+            }
+
+            static ICommand GetCommandFromKey(ConsoleKeyInfo ki)
+            {
+                Command command = null;
+
+                switch (ki.Key)
                 {
                     case ConsoleKey.W:
                     case ConsoleKey.UpArrow:
-                        fakeComponentReciever.MoveUp();
+                        command = new MoveUpCommand();
                         break;
 
                     case ConsoleKey.D:
                     case ConsoleKey.RightArrow:
-                        fakeComponentReciever.MoveRight();
+                        command = new MoveRightCommand();
                         break;
 
                     case ConsoleKey.S:
                     case ConsoleKey.DownArrow:
-                        fakeComponentReciever.MoveDown();
+                        //fakeComponentReciever.MoveDown();
                         break;
 
                     case ConsoleKey.A:
                     case ConsoleKey.LeftArrow:
-                        fakeComponentReciever.MoveLeft();
+                        //fakeComponentReciever.MoveLeft();
                         break;
-
 
                     default:
                         Console.WriteLine("IDK that key");
-                            break;
+                        break;
                 }
-                Console.WriteLine($"x:{fakeComponentReciever.X} y:{fakeComponentReciever.Y}");
+
+                return command;
             }
         }
     }
