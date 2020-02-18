@@ -10,10 +10,12 @@ namespace ConsoleAppCommand
 
             GameComponent fakeComponentReciever = new GameComponent();
 
+            Console.Write("\n\tW: move up\tA: move left\tS: move down\tD: move right\tspace: fly up\tZ: fall down");
+
             while (isPlaying)
             {
                 //play game
-                Console.Write("Enter a key:");
+           
                 ConsoleKeyInfo keyI = Console.ReadKey();
 
                 ICommand command = GetCommandFromKey(keyI);
@@ -34,7 +36,7 @@ namespace ConsoleAppCommand
                 }
 
 
-                Console.WriteLine($"x:{fakeComponentReciever.X} y:{fakeComponentReciever.Y}");
+                Console.WriteLine($"\n\tX:{fakeComponentReciever.X}\tY:{fakeComponentReciever.Y}\tZ:{fakeComponentReciever.Z}");
             }
 
             static ICommand GetCommandFromKey(ConsoleKeyInfo ki)
@@ -61,6 +63,14 @@ namespace ConsoleAppCommand
                     case ConsoleKey.A:
                     case ConsoleKey.LeftArrow:
                         command = new MoveLeftCommand();
+                        break;
+
+                    case ConsoleKey.Spacebar:
+                        command = new FlyUpCommand();
+                        break;
+
+                    case ConsoleKey.Z:
+                        command = new FlyDownCommand();
                         break;
 
                     default:

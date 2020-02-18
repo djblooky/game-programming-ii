@@ -6,7 +6,7 @@ namespace ConsoleAppCommand
 {
     public class GameComponent
     {
-        protected int _X = 0, _Y = 0;
+        protected int _X = 0, _Y = 0, _Z = 0;
 
         public int X
         {
@@ -18,6 +18,22 @@ namespace ConsoleAppCommand
         {
             get { return this._Y; }
             protected set { _Y = value; }
+        }
+
+        public int Z
+        {
+            get { return this._Z; }
+            protected set { _Z = value; }
+        }
+
+        internal void FlyUp()
+        {
+            Z++;
+        }
+
+        internal void FlyDown()
+        {
+            Z--;
         }
 
         internal void MoveUp()
