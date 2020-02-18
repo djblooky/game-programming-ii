@@ -55,12 +55,12 @@ namespace ConsoleAppCommand
 
                     case ConsoleKey.S:
                     case ConsoleKey.DownArrow:
-                        //fakeComponentReciever.MoveDown();
+                        command = new MoveDownCommand();
                         break;
 
                     case ConsoleKey.A:
                     case ConsoleKey.LeftArrow:
-                        //fakeComponentReciever.MoveLeft();
+                        command = new MoveLeftCommand();
                         break;
 
                     default:

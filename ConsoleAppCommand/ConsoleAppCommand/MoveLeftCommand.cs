@@ -4,16 +4,16 @@ using System.Text;
 
 namespace ConsoleAppCommand
 {
-    public class MoveUpCommand : Command
+    public class MoveLeftCommand : Command
     {
-        public MoveUpCommand()
+        public MoveLeftCommand()
         {
-            this.CommandName = "Move Up";
+            this.CommandName = "Move Left";
         }
 
         public override void Execute(GameComponent go)
         {
-            go.MoveUp();
+            go.MoveLeft();
             base.Execute(go);
         }
     }
